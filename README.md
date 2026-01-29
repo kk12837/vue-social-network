@@ -1,5 +1,7 @@
 # vue-social-icons
 
+[Live demo](https://vue-social-network.kk261188.workers.dev/) — https://vue-social-network.kk261188.workers.dev/
+
 Vue social icons and sharing component
 
 Install
