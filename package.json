@@ -1,6 +1,6 @@
 {
   "name": "vue-social-icons",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "description": "Vue social icons and sharing component",
   "main": "dist/index.cjs.js",
@@ -27,7 +27,15 @@
     "serve": "vite preview",
     "prepublishOnly": "npm run build:lib"
   },
-  "keywords": ["vue","social","social-icons","share","vue3","fontawesome","social-share"],
+  "keywords": [
+    "vue",
+    "social",
+    "social-icons",
+    "share",
+    "vue3",
+    "fontawesome",
+    "social-share"
+  ],
   "author": "Keith Kong",
   "license": "MIT",
   "peerDependencies": {
