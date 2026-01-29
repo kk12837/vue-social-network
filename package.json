@@ -1,17 +1,25 @@
 {
-  "name": "vue-social-network",
+  "name": "vue-social-icons",
   "version": "1.0.0",
   "type": "module",
-  "description": "",
-  "main": "index.js",
+  "description": "Vue social icons and sharing component",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "files": ["dist", "README.md"],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "build:lib": "vite build --config vite.config.lib.js",
+    "serve": "vite preview",
+    "prepublishOnly": "npm run build:lib"
   },
   "keywords": [],
   "author": "Keith Kong",
   "license": "MIT",
+  "peerDependencies": {
+    "vue": "^3",
+    "@fortawesome/vue-fontawesome": "^3"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
     "@fortawesome/free-brands-svg-icons": "^7.1.0",
