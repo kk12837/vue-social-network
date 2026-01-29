@@ -11,6 +11,32 @@
       <social-icon type="youtube" />
       <social-icon type="fas:envelope" ariaLabel="Email" />
     </div>
+
+    <section class="share">
+      <h2>Share this page</h2>
+      <div class="icons">
+        <social-icon
+          type="twitter"
+          share
+          :title="shareTitle"
+          :description="shareDescription"
+        />
+
+        <social-icon type="facebook" share :title="shareTitle" />
+
+        <social-icon
+          type="linkedin"
+          share
+          :title="shareTitle"
+          :description="shareDescription"
+        />
+
+        <social-icon type="telegram" share :title="shareTitle" />
+        <social-icon type="whatsapp" share :title="shareTitle" />
+        <social-icon type="reddit" share :title="shareTitle" />
+        <social-icon type="pinterest" share :title="shareTitle" :description="shareDescription" />
+      </div>
+    </section>
   </div>
 </template>
 
@@ -19,7 +45,13 @@ import SocialIcon from '@/components/SocialIcon.vue'
 
 export default {
   name: 'App',
-  components: { SocialIcon }
+  components: { SocialIcon },
+  data() {
+    return {
+      shareTitle: 'Vue Social Network',
+      shareDescription: 'Check out this Vue Social Network demo.'
+    }
+  }
 }
 </script>
 
