@@ -45,7 +45,18 @@ const icon = computed(() => {
   }
 
   // brand mapping for common social names
-  if (brandMap[raw]) return ['fab', brandMap[raw]]
+  if (brandMap[raw]) {
+    const mapped = brandMap[raw]
+    if (Array.isArray(mapped)) return mapped
+    if (typeof mapped === 'string' && mapped.includes(':')) {
+      const [p, n] = mapped.split(':')
+      return [p, n]
+    }
+    return ['fab', mapped]
+  }
+
+  // small explicit fallbacks for non-brand icons
+  if (raw === 'email' || raw === 'envelope') return ['fas', 'envelope']
 
   // default to brand prefix with normalized name
   const normalized = raw.replace(/\s+/g, '-').replace(/^@/, '')
@@ -97,6 +108,26 @@ function buildShareHref(platform, url, title, description) {
       return `https://pinterest.com/pin/create/button/?url=${u}&description=${d}`
     case 'reddit':
       return `https://www.reddit.com/submit?url=${u}&title=${t}`
+    case 'email':
+      return `mailto:?subject=${t}&body=${d}%0A%0A${u}`
+    case 'mastodon':
+      return `https://mastodon.social/share?text=${t}%20${u}`
+    case 'pocket':
+      return `https://getpocket.com/save?url=${u}&title=${t}`
+    case 'hackernews':
+      return `https://news.ycombinator.com/submitlink?u=${u}&t=${t}`
+    case 'messenger':
+      return `https://www.facebook.com/sharer/sharer.php?u=${u}`
+    case 'tumblr':
+      return `https://www.tumblr.com/widgets/share/tool?canonicalUrl=${u}&title=${t}&caption=${d}`
+    case 'skype':
+      return `https://web.skype.com/share?url=${u}`
+    case 'viber':
+      return `viber://forward?text=${t}%20${u}`
+    case 'line':
+      return `https://social-plugins.line.me/lineit/share?url=${u}`
+    case 'sms':
+      return `sms:?&body=${t}%20${u}`
     default:
       return ''
   }

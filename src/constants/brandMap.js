@@ -17,4 +17,14 @@ export const brandMap = {
   twitch: 'twitch',
   dribbble: 'dribbble',
   behance: 'behance'
+  ,mastodon: 'mastodon'
+  ,pocket: 'get-pocket'
+  ,hackernews: 'hacker-news'
+  ,messenger: 'facebook-messenger'
+  ,tumblr: 'tumblr'
+  ,skype: 'skype'
+  ,viber: 'viber'
+  ,line: 'line'
+  ,wechat: 'weixin'
+  ,sms: 'fas:sms'
 }

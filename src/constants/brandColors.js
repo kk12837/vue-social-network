@@ -17,4 +17,13 @@ export const brandColors = {
   twitch: '#9146FF',
   dribbble: '#EA4C89',
   behance: '#1769FF'
+  ,mastodon: '#6364FF'
+  ,pocket: '#EF4056'
+  ,hackernews: '#FF6600'
+  ,messenger: '#0078FF'
+  ,tumblr: '#36465D'
+  ,skype: '#00AFF0'
+  ,viber: '#665CAC'
+  ,line: '#00C300'
+  ,wechat: '#7BB32E'
 }

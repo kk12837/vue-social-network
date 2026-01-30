@@ -73,14 +73,14 @@ const popoverStyle = computed(() => {
   const dir = (props.direction || 'bottom').toLowerCase()
   switch (dir) {
     case 'top':
-      return { bottom: 'calc(100% + 8px)', left: '0' }
+      return { bottom: 'calc(100% + 8px)', left: '0', top: 'auto', right: 'auto' }
     case 'left':
-      return { right: 'calc(100% + 8px)', top: '0' }
+      return { right: 'calc(100% + 8px)', top: '0', left: 'auto', bottom: 'auto' }
     case 'right':
-      return { left: 'calc(100% + 8px)', top: '0' }
+      return { left: 'calc(100% + 8px)', top: '0', right: 'auto', bottom: 'auto' }
     case 'bottom':
     default:
-      return { top: 'calc(100% + 8px)', left: '0' }
+      return { top: 'calc(100% + 8px)', left: '0', bottom: 'auto', right: 'auto' }
   }
 })
 </script>
