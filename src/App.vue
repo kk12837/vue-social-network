@@ -91,7 +91,7 @@
     </section>
 
     <footer class="repo-footer">
-      Source code: <a href="https://github.com/kk12837/vue-social-network" target="_blank" rel="noopener noreferrer">https://github.com/kk12837/vue-social-network</a>
+      Source code: <a href="https://github.com/kk12837/vue-social-icons" target="_blank" rel="noopener noreferrer">https://github.com/kk12837/vue-social-icons</a>
     </footer>
   </div>
 </template>
